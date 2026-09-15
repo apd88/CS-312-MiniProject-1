@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- yeahh i gotta change the title of the blog later seems too bland-->
+    <title>Aston's Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/new">New Post</a>
+    </nav>
+    <h1>My Blog</h1>
+    <!--secret picture of my cat jack except its not a secret because its right on the front page -->
+             <img src="/jack_image_1.jpg" alt="jack" class="side-photo">
+    <% for (var i = 0; i < posts.length; i++) { %>
+    <article class="post">
+        <h2><%= posts[i].title %></h2>
+        <p><%= posts[i].content %></p>
+                <p>Posted on: <%= posts[i].created %></p>
+
+
+        <a href="/posts/<%= posts[i].id %>">
+        <button type="button">View Post</button>
+        </a>
+    </article>
+    <% } %>
+</body>
+</html>

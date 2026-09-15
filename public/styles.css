@@ -1,0 +1,33 @@
+
+
+body {
+    background-color: lightblue;
+}
+
+/* for the picture of my cat */
+.photo-wrapper {
+    text-align: right;
+}
+
+.side-photo {
+    float: right;
+    width: 350px;
+    max-width: 40%;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+
+/* i wanted to put a border around the posts so that its easier to see */
+/* and differentiate between posts */
+
+.post {
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+}
+
+.post {
+    overflow: auto;
+}

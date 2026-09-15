@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= post.title %> - My Blog</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/new">New Post</a>
+    </nav>
+
+    <h1><%= post.title %></h1>
+    <p><%= post.content %></p>
+
+    <div class="actionss">
+        <!-- edit and delete button... double check before submit  -->
+        <a href="/posts/<%= post.id %>/edit">
+            <button type="button">Edit</button>
+        </a>
+
+        <!--i feel like confirm button isnt needed but ill leave it for now-->
+
+        <form action="/posts/<%= post.id %>/delete" method="POST" style="display: inline;">
+            <button type="submit" onclick="return confirm('This post will be deleted');">Delete</button>
+        </form>
+    </div>
+    <br>
+
+    <a href="/">Return to Home</a>
+</body>
+
+
+
+</html>
